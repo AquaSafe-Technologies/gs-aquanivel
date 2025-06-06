@@ -229,6 +229,7 @@ section:hover {
   }
 }
 
+
 .slideshow {
   display: flex;
   flex-direction: column;
@@ -253,6 +254,7 @@ section:hover {
 .slideshow img.ativo {
   display: block;
 }
+
 
 .formulario {
   max-width: 600px;
@@ -290,6 +292,7 @@ section:hover {
   background-color: var(--secundaria);
 }
 
+
 .menu-hamburguer {
   display: none;
   font-size: 2rem;
@@ -310,6 +313,7 @@ section:hover {
     display: block;
     margin-left: auto;
   }
+
 
   #nav-list {
     display: none;
