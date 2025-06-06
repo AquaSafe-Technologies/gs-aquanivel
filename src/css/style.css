@@ -253,3 +253,39 @@ section:hover {
 .slideshow img.ativo {
   display: block;
 }
+
+.formulario {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--branco);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.formulario button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--primaria);
+  color: var(--branco);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: var(--secundaria);
+}
