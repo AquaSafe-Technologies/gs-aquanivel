@@ -228,3 +228,28 @@ section:hover {
     display: flex;
   }
 }
+
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  min-height: 300px;
+  justify-content: center;
+}
+
+.slideshow img {
+  display: none;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--sombra);
+  transition: opacity 0.5s ease;
+}
+
+.slideshow img.ativo {
+  display: block;
+}
