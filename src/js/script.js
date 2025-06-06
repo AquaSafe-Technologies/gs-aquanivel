@@ -1,6 +1,8 @@
+// script.js - Tema, slideshow, menu hambúrguer e envio de formulário
+
 document.addEventListener('DOMContentLoaded', () => {
 
-
+// Alternância do menu em telas pequenas
   const toggle = document.getElementById('menu-toggle');
   const navList = document.getElementById('nav-list');
   if (toggle && navList) {
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
+// Troca de tema via botão
   document.querySelectorAll('.tema-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const tema = btn.dataset.tema;
@@ -17,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
+// Lógica do slideshow automático
   const slides = document.querySelectorAll('.slide');
   let slideAtual = 0;
 
@@ -33,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4000);
   }
 
-  
+  // Validação do formulário de contato
   const form = document.getElementById('form-contato');
   if (form) {
     form.addEventListener('submit', (e) => {
