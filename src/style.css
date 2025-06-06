@@ -1,0 +1,158 @@
+:root {
+  --primaria: #0077b6;
+  --secundaria: #90e0ef;
+  --fundo: #f0f8ff;
+  --texto: #1d1d1d;
+  --branco: #ffffff;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, var(--fundo), #ffffff);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, var(--primaria), #0096c7);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px var(--sombra);
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--secundaria);
+}
+
+main {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+section {
+  scroll-margin-top: 120px;
+  transition: all 0.3s ease;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--branco);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--sombra);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--primaria);
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+section .texto {
+  flex: 1;
+  max-width: 50%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+section p {
+  flex: 1;
+  min-width: 250px;
+}
+
+section img {
+  flex: 1;
+  max-width: 50%;
+  width: 100%;
+  height: auto;
+  padding: 0 1rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: var(--primaria);
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+section:target h2::after {
+  content: " ✓";
+  color: var(--secundaria);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  section {
+    flex-direction: column !important;
+    padding: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
