@@ -7,6 +7,41 @@
   --sombra: rgba(0, 0, 0, 0.1);
 }
 
+:root[data-tema='azul'] {
+  --primaria: #0077b6;
+  --secundaria: #90e0ef;
+  --fundo: #f0f8ff;
+}
+
+:root[data-tema='verde'] {
+  --primaria: #2e7d32;
+  --secundaria: #a5d6a7;
+  --fundo: #e8f5e9;
+}
+
+:root[data-tema='vermelho'] {
+  --primaria: #b71c1c;
+  --secundaria: #ef9a9a;
+  --fundo: #ffebee;
+}
+
+.temas {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.tema-btn {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.tema-btn:hover {
+  transform: scale(1.2);
+}
+
 * {
   margin: 0;
   padding: 0;

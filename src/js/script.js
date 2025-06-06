@@ -6,3 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     navList.classList.toggle('show');
   });
 });
+
+document.querySelectorAll('.tema-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tema = btn.dataset.tema;
+    document.documentElement.setAttribute('data-tema', tema);
+  });
+});
