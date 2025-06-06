@@ -1,3 +1,5 @@
+// quiz.js - Lógica do quiz interativo de 10 perguntas sobre enchentes
+
 const perguntas = [
   {
     pergunta: "O que é uma enchente?",
